@@ -11,7 +11,7 @@ vector<int>unionOfArrays(vector<int>arr1,int n,vector<int>arr2,int m){
             }
             i++;
         }else{
-            if(res.empty() || res.back()!=arr2[j]){
+            if(res.empty() && res.back()!=arr2[j]){
                 res.push_back(arr2[j]);    
             }
             j++;
@@ -24,7 +24,7 @@ vector<int>unionOfArrays(vector<int>arr1,int n,vector<int>arr2,int m){
         i++;
     }
      while(j<m){
-        if(res.empty() || res.back()!=arr2[j]){
+        if(res.empty() && res.back()!=arr2[j]){
             res.push_back(arr2[j]);
         }
         j++;
